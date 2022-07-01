@@ -22,6 +22,8 @@
                 <input id="add_last_name" class="box" type="text" name="add_last_name" placeholder="Last Name" value="${add_last_name}" required><br><br>
                 <input id="add_password" class="box" type="password" name="add_password" placeholder="Password" value="${add_password}" required><br><br>
                 
+                
+                
                 <select class="select" name="add_role">
                     <option value="">--choose--</option>
                     <c:forEach var="role" items="${roles}">
