@@ -14,5 +14,11 @@ public class RoleService {
         return roleo;
     }
 
+    
+     public Role get(String role_name) throws Exception {
+        RoleDB roleDB = new RoleDB();
+        Role role = roleDB.get(role_name);
+        return role;
+    }
   
 }

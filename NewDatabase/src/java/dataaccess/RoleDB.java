@@ -38,7 +38,31 @@ public class RoleDB {
 
         return roleo;
 }
-
+public Role get(String role_name) throws Exception {
+        Role role = null;
+        ConnectionPool cp = ConnectionPool.getInstance();
+        Connection con = cp.getConnection();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        
+        String sql = "SELECT role_id FROM role WHERE role_name=?";
+        
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, role_name);
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                int role_id = rs.getInt(1);
+                role = new Role(role_id, role_name);
+            }
+        } finally {
+            DBUtil.closeResultSet(rs);
+            DBUtil.closePreparedStatement(ps);
+            cp.freeConnection(con);
+        }
+        
+        return role;
+    }
     
 
     
