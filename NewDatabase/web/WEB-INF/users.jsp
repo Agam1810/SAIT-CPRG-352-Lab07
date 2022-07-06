@@ -7,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Users</title>
         <link rel="stylesheet" href="index.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100&display=swap" rel="stylesheet">
+        
     </head>
     <body>
         <!--Parent Container Div-->
